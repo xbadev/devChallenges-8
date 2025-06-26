@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bader An">
+    <meta name="description" content="Our team, The Brain">
+    <title>Meet The Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            background: #FFFEFE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            width: 1450px;
+            max-width: 95vw;
+            height: 750px;
+            background-color: #F3F4F6;
+            border-radius: 32px;
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 48px 0 48px 30px;
+            height: 100%;
+            margin-right: -170px;
+            z-index: 2;
+        }
+
+        #eyebrow {
+            color: #263FA9;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .head h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        #subtext {
+            color: #394150;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: auto;
+            line-height: 1.4;
+        }
+
+        .head a {
+            color: #394150;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+            display: flex;
+            align-items: end;
+        }
+
+        .head svg {
+            margin-left: 5px;
+        }
+
+        .head a:hover {
+            color: #3B5CCC;
+        }
+
+        #decor {
+            position: absolute;
+            z-index: 1;
+            transform: scale(1.07);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+            color: #FFFEFE;
+            overflow: hidden;
+        }
+
+        .card:nth-child(1) {
+            background-color: #C1B6F8;
+            grid-column: 2;
+        }
+
+        .card:nth-child(2) {
+            background-color: #EDACD2;
+            grid-column: 3;
+            border-radius: 0 32px 0 0;
+        }
+
+        .card:nth-child(3) {
+            background-color: #9DC4F8;
+        }
+
+        .card:nth-child(4) {
+            background-color: #F8D8B0;
+        }
+
+        .card:nth-child(5) {
+            background-color: #86E7D4;
+            border-radius: 0 0 32px 0;
+        }
+
+        .card img {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card .meta {
+            position: relative;
+            z-index: 3;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .card .role {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(217, 217, 217, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+
+        @media (max-width: 1000px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 2fr;
+            }
+
+            .cards-container {
+                grid-column: 1 / span 3;
+                grid-row: 2 / span 2;
+                width: 100%;
+            }
+
+            .card:nth-child(1) {
+                grid-column: 1;
+                z-index: 1;
+            }
+
+            .card:nth-child(2) {
+                grid-column: 2;
+                border-radius: 0;
+                z-index: 1;
+            }
+
+            .card:nth-child(4) {
+                grid-column: 2;
+            }
+
+            .head {
+                height: 264%;
+            }
+
+            .card h3 {
+                font-size: 1rem;
+            }
+
+            .card .role {
+                font-size: 0.8rem;
+            }
+
+            #subtext {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .grid-container {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+
+            .head {
+                width: 100%;
+            }
+
+            .head a {
+                position: absolute;
+                left: 30px;
+                bottom: 48px;
+            }
+
+            .cards-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .card {
+                aspect-ratio: 3 / 3;
+            }
+
+            .card:nth-child(5) {
+                border-radius: 0;
+                margin-bottom: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div id="decor">
+            <svg id="decor" width="222" height="404" viewBox="0 0 222 404" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M187.549 0H190.58C190.513 0.472552 190.446 0.940586 190.381 1.40352L190.381 1.40402L190.381 1.40438C190 4.09174 189.644 6.60721 189.299 8.83707C187.426 20.9433 185.979 33.4256 184.528 45.9397C184.251 48.3328 183.973 50.7269 183.693 53.1199C181.946 68.0093 180.079 82.8397 177.37 96.9333C174.444 112.161 170.309 122.63 165.268 130.709C160.227 138.787 154.33 144.392 148.035 149.917C118.598 175.756 85.3511 180.84 54.3858 170.45C40.3244 165.732 26.7336 156.247 13.3705 146.445C11.8931 145.362 10.4184 144.274 8.9459 143.188L8.94212 143.185L8.94198 143.185C5.95477 140.982 2.97611 138.786 0 136.64V132.947C3.58832 135.508 7.15981 138.142 10.7179 140.767L10.7262 140.773C12.2013 141.861 13.6741 142.948 15.1448 144.026C28.5468 153.857 41.7845 163.057 55.3402 167.606C85.2886 177.655 117.419 172.8 146.056 147.662C152.293 142.188 157.92 136.817 162.722 129.121C167.524 121.427 171.549 111.326 174.424 96.3671C177.111 82.3912 178.967 67.6567 180.713 52.7704C180.993 50.3858 181.27 47.9971 181.547 45.6071L181.547 45.6059C182.997 33.0932 184.452 20.5454 186.334 8.37847C186.668 6.21849 187.018 3.75124 187.394 1.09621L187.394 1.09503C187.445 0.733405 187.497 0.368293 187.549 0ZM0 397.967C1.61346 395.37 3.29563 393.045 5.04591 390.966C12.7574 381.805 21.7117 377.503 31.6567 375.656C44.3624 373.297 57.075 374.698 69.5268 376.07L69.5275 376.07C70.062 376.129 70.5961 376.188 71.1297 376.246C84.1732 377.676 96.9406 378.9 109.626 375.9C119.245 373.625 128.819 367.6 138.114 358.84C147.401 350.088 156.33 338.68 164.664 325.779C184.181 295.567 203.117 255.197 209.271 199.281C212.139 173.232 212.808 146.668 213.104 119.941C213.164 114.491 213.209 109.034 213.254 103.573V103.572V103.57C213.428 82.2711 213.604 60.9162 214.704 39.7479C214.74 39.054 214.776 38.3518 214.812 37.6425C215.191 30.2678 215.609 22.1183 216.484 14.3809C217.053 9.35096 217.819 4.44422 218.911 0H222.003C220.867 4.42246 220.062 9.44231 219.465 14.7179C218.601 22.359 218.187 30.4172 217.808 37.8074C217.771 38.5125 217.736 39.2116 217.7 39.9036C216.603 61.0002 216.429 82.2714 216.254 103.564V103.564C216.209 109.034 216.164 114.505 216.104 119.974C215.808 146.715 215.138 173.404 212.253 199.61C206.038 256.075 186.902 296.883 167.184 327.406C158.769 340.434 149.69 352.053 140.172 361.023C130.663 369.985 120.635 376.379 110.317 378.82C97.0587 381.955 83.7978 380.653 70.8028 379.228C70.3512 379.179 69.8999 379.129 69.449 379.08L69.3445 379.068C56.7754 377.685 44.4634 376.33 32.2043 378.606C22.8413 380.344 14.5435 384.342 7.34103 392.898C4.7597 395.965 2.30917 399.629 0 404.003V397.967Z"
+                    fill="#FFFEFE" />
+            </svg>
+        </div>
+        <div class="grid-container">
+            <div class="head">
+                <p id="eyebrow">Our team</p>
+                <h1>Meet the brain</h1>
+                <p id="subtext">We are proud to have them as part of our community and look forward to continuing to
+                    push the boundaries of what's possible in the world of digital art.</p>
+                <a href="#">See all members
+                    <svg width="20" height="16" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.3333 4H4.66667C4.26667 4 4 4.26667 4 4.66667C4 5.06667 4.26667 5.33333 4.66667 5.33333H9.73333L4.2 10.8667C3.93333 11.1333 3.93333 11.5333 4.2 11.8C4.46667 12.0667 4.86667 12.0667 5.13333 11.8L10.6667 6.26667V11.3333C10.6667 11.7333 10.9333 12 11.3333 12C11.7333 12 12 11.7333 12 11.3333V4.66667C12 4.26667 11.7333 4 11.3333 4Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="person_1.png" alt="Liam Novak Picture">
+                    <div class="meta">
+                        <h3>Liam Novak</h3>
+                        <p class="role">Software Engineer</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="person_2.png" alt="Sophia Picture">
+                    <div class="meta">
+                        <h3>Sophia Moretti</h3>
+                        <p class="role">Business Development Manager</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="person_3.png" alt="Ethan Picture">
+                    <div class="meta">
+                        <h3>Ethan Rossi</h3>
+                        <p class="role">Business Development Manager</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="person_4.png" alt="Isabella Picture">
+                    <div class="meta">
+                        <h3>Isabella Ricci</h3>
+                        <p class="role">UX Designer</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="person_5.png" alt="Noah Picture">
+                    <div class="meta">
+                        <h3>Noah Conti</h3>
+                        <p class="role">Content Creator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
