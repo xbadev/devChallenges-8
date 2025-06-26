@@ -208,6 +208,7 @@ section {
     section {
         height: auto;
         min-height: 100vh;
+        margin: 36px;
     }
 
     .grid-container {
